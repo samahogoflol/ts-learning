@@ -1,0 +1,100 @@
+
+.tournament_block {
+  position: relative;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 500px;
+  height: 60vh;
+  overflow: hidden;
+
+  .tournament_block_fon_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  .tournament_block_create_tournament {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    max-width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+
+    .tournament_block_img_icons {
+      display: flex;
+      gap: 10px;
+    }
+
+    h2 {
+      margin-bottom: 25px;
+      font-size: 2em;
+    }
+
+    img {
+      width: 100px;
+      height: auto;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background-color: white;
+      color: #333;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .tournament_block {
+    min-height: 350px;
+    height: 50vh;
+
+    .tournament_block_create_tournament {
+      padding: 20px;
+
+      h2 {
+        font-size: 1.5em;
+      }
+
+      img {
+        max-width: 80px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .tournament_block {
+    min-height: 300px;
+    height: 40vh;
+
+    .tournament_block_create_tournament {
+      padding: 15px;
+
+      h2 {
+        font-size: 1.2em;
+      }
+
+      img {
+        max-width: 60px;
+      }
+    }
+  }
+}

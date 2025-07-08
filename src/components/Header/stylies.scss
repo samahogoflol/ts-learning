@@ -1,0 +1,19 @@
+.header {
+  background-color: black;
+  height: 50px;
+
+  nav {
+    color: white;
+
+    ul {
+      display: flex;
+      justify-content: center;
+      gap: 120px;
+
+      li {
+        margin-top: 10px;
+        font-weight: bold;
+      }
+    }
+  }
+}
