@@ -1,10 +1,20 @@
 import React from "react";
 
+import "./stylies.scss";
+
+import SimpleSlider from "../Slider/Slider";
+
 const CreateTournament = () => {
   return (
-    <div>
-      <h2>Сторінка створення турніру</h2>
-    </div>
+    <>
+      <div className="create_tournament_page_container">
+        <h2>Створи турнір по шаблону, або зроби свій варіант.</h2>
+
+        <div className="main_create_tournament_block">
+          <SimpleSlider />
+        </div>
+      </div>
+    </>
   );
 };
 
