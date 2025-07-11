@@ -9,9 +9,11 @@ import muLogo from "../../imgs/Football Clubs/EPL/mu_logo.png";
 import newCastleLogo from "../../imgs/Football Clubs/EPL/newcastle_logo.png";
 import arsenalLogo from "../../imgs/Football Clubs/EPL/arsenal_logo.png";
 
-import laLigaLogo from "../../imgs/Football League/ef962943-cd1e-4843-a19a-8c1b5b9e9abb.jpg";
+import yelowStar from "../../imgs/utils/yelow_star.svg";
 
 function SlickGoTo() {
+  const arrayOfStars = yelowStar;
+
   const settings = {
     infinite: true,
     speed: 500,
@@ -25,26 +27,46 @@ function SlickGoTo() {
         <div className="img_container">
           <h3 style={{ marginBottom: "30px", fontSize: "24px", fontWeight: "bolder", textAlign: "center" }}>Tottenhem</h3>
           <img className="team_logo" src={tottenhemLogo} />
-          <h3>*****</h3>
-          <img className="league_logo" src={laLigaLogo} />
+          <div className="star_container">
+            <img className="star" src={yelowStar} alt="" />
+            <img className="star" src={yelowStar} alt="" />
+            <img className="star" src={yelowStar} alt="" />
+            <img className="star" src={yelowStar} alt="" />
+            <img className="star" src={yelowStar} alt="" />
+          </div>
         </div>
-        <div>
+        <div className="img_container">
           <h3 style={{ marginBottom: "30px", fontSize: "24px", fontWeight: "bolder", textAlign: "center" }}>Manchester City</h3>
           <img className="team_logo" src={mcLogo} />
-          <h3>*****</h3>
-          <img className="league_logo" src={laLigaLogo} />
+          <div className="star_container">
+            <img className="star" src={yelowStar} alt="" />
+            <img className="star" src={yelowStar} alt="" />
+            <img className="star" src={yelowStar} alt="" />
+            <img className="star" src={yelowStar} alt="" />
+            <img className="star" src={yelowStar} alt="" />
+          </div>
         </div>
-        <div>
+        <div className="img_container">
           <h3 style={{ marginBottom: "30px", fontSize: "24px", fontWeight: "bolder", textAlign: "center" }}>Manchester United</h3>
           <img className="team_logo" src={muLogo} />
-          <h3>*****</h3>
-          <img className="league_logo" src={laLigaLogo} />
+          <div className="star_container">
+            <img className="star" src={yelowStar} alt="" />
+            <img className="star" src={yelowStar} alt="" />
+            <img className="star" src={yelowStar} alt="" />
+            <img className="star" src={yelowStar} alt="" />
+            <img className="star" src={yelowStar} alt="" />
+          </div>
         </div>
-        <div>
+        <div className="img_container">
           <h3 style={{ marginBottom: "30px", fontSize: "24px", fontWeight: "bolder", textAlign: "center" }}>Newcastle</h3>
           <img className="team_logo" src={newCastleLogo} />
-          <h3>*****</h3>
-          <img className="league_logo" src={laLigaLogo} />
+          <div className="star_container">
+            <img className="star" src={yelowStar} alt="" />
+            <img className="star" src={yelowStar} alt="" />
+            <img className="star" src={yelowStar} alt="" />
+            <img className="star" src={yelowStar} alt="" />
+            <img className="star" src={yelowStar} alt="" />
+          </div>
         </div>
       </Slider>
     </div>

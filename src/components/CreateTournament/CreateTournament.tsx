@@ -1,5 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
+import { useState } from "react";
+
+import CreateTournamentPage from "../CreateTournamentPage/CreateTournamentPage";
+
 import Button from "../../shared/Button/Button";
 import "./stylies.scss";
 
@@ -26,15 +31,7 @@ const CreateTournament = ({}) => {
             <img src={neymar}></img>
           </div>
           <img></img>
-          <select>
-            <option>Кількість учасників</option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            <option>6</option>
-          </select>
+          <input placeholder="Введіть кількість учасників" type="number" />
           <select>
             <option>Турнір</option>
             <option>League Champions</option>
@@ -43,8 +40,7 @@ const CreateTournament = ({}) => {
             <option>Фантазія</option>
           </select>
           <Link to="/createTournamentPage">
-            <Button text="Створити турнір" />
-            {/* <button>Перейти до створення турніру</button> */}
+            <Button text="Створити турнір " />
           </Link>
         </div>
       </div>
