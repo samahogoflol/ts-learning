@@ -1,12 +1,10 @@
-import React from "react";
+import React, { useState, ChangeEvent } from "react";
 import { Link } from "react-router-dom";
-
-import { useState } from "react";
-
-import CreateTournamentPage from "../CreateTournamentPage/CreateTournamentPage";
 
 import Button from "../../shared/Button/Button";
 import "./stylies.scss";
+
+import CreateTournamentPage from "../CreateTournamentPage/CreateTournamentPage";
 
 import tournamentImg from "../../imgs/cole_palmer.jpeg";
 import fonLeagueChempionsImg from "../../imgs/league_champions_fon.jpg";
@@ -16,6 +14,20 @@ import neymar from "../../imgs/neymar.jpeg";
 import yamal from "../../imgs/yamal.jpeg";
 
 const CreateTournament = ({}) => {
+  const [members, setMembers] = useState<number>(0);
+  const [tournamentType, setTounamentType] = useState<string>("Турнір");
+
+  const onMembers = (e: ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    const numericValue = Number(value);
+    setMembers(numericValue);
+  };
+
+  const onTournament = (e: ChangeEvent<HTMLSelectElement>) => {
+    const value = e.target.value;
+    setTounamentType(value);
+  };
+
   return (
     <>
       <div className="tournament_block">
@@ -31,15 +43,25 @@ const CreateTournament = ({}) => {
             <img src={neymar}></img>
           </div>
           <img></img>
-          <input placeholder="Введіть кількість учасників" type="number" />
-          <select>
-            <option>Турнір</option>
+          <input value={members} onChange={onMembers} placeholder="Введіть кількість учасників" type="number" />
+
+          <select value={tournamentType} onChange={onTournament}>
             <option>League Champions</option>
             <option>English Premier League</option>
             <option>World Cup</option>
             <option>Фантазія</option>
           </select>
-          <Link to="/createTournamentPage">
+          <Link
+            to={
+              {
+                pathname: "/createTournamentPage",
+                state: {
+                  numberOfMembers: members,
+                  tournamentType: tournamentType,
+                },
+              } as any
+            }
+          >
             <Button text="Створити турнір " />
           </Link>
         </div>

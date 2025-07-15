@@ -1,17 +1,33 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 
 import "./stylies.scss";
 
 import SimpleSlider from "../Slider/Slider";
 
+type TouramentPageState = {
+  numberOfMembers: number;
+  tournamentType: string;
+};
+
 const CreateTournamentPage = () => {
+  const location = useLocation();
+
+  const state = location.state as TouramentPageState | null;
+
+  const numberOfMembers = state?.numberOfMembers || 0;
+  const tournamentType = state?.tournamentType || "Виберіть формат турніра";
+
   return (
     <>
       <div className="create_tournament_page">
+        <h2>{numberOfMembers}</h2>
+        <h2>{tournamentType}</h2>
         <h2>
           Створи турнір по своїм власним правилам! Доступно декілька варіантів турнірів, можна грати по різному сценарію, на будь-яку
           к-сть учасників! Прийми участь та насолоджуйся грою.
         </h2>
+
         <h2 className="header_create_tournament">Форма створення турніру : </h2>
 
         <div className="create_tournament_form">
